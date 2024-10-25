@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AIDesigner from '../components/AIDesigner';
+---
+
+<Layout 
+  title="Create Custom T-Shirt Design | AI-Powered Designer" 
+  description="Design your own t-shirt using our AI-powered design tool. Transform your ideas into unique t-shirt designs instantly."
+>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">Create Your Custom Design</h1>
+    <AIDesigner client:load />
+  </div>
+</Layout>

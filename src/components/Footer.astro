@@ -1,0 +1,31 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-gray-800 text-white py-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+        <p class="text-gray-300">Creating unique AI-generated t-shirt designs that reflect your personality.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/sizing" class="text-gray-300 hover:text-white">Sizing Guide</a></li>
+          <li><a href="/shipping" class="text-gray-300 hover:text-white">Shipping Info</a></li>
+          <li><a href="/returns" class="text-gray-300 hover:text-white">Returns Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li class="text-gray-300">Email: support@aitshirt.com</li>
+          <li class="text-gray-300">Phone: (555) 123-4567</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+      <p class="text-gray-300">&copy; {currentYear} AI TShirt Store. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

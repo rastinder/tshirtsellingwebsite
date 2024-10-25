@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const topSellers = [
+  {
+    id: 1,
+    name: "Classic White Essential Tee",
+    price: 29.99,
+    image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSkjjsh9xlRSbWp7ZNo05kszW9eGl86pOPo-HTaKKSPvbpz76zx0CGSTmn5Xqhc9YWW2UtRHel1co8vYZ9hiKdFzSJgHA3jQR6hlvPYcJRuS0DH7CFhmPgiLA",
+    sales: 250,
+    description: "Premium cotton blend classic white t-shirt, perfect for everyday wear"
+  }
+];
+---
+
+<Layout title="AI T-Shirt Store | Custom T-Shirt Designs">
+  <div class="max-w-7xl mx-auto">
+    <section class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Premium T-Shirts with AI-Generated Designs</h1>
+      <p class="text-xl text-gray-600 mb-8">Discover unique designs or create your own with our AI technology</p>
+      <a 
+        href="/custom" 
+        class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Create Your Design
+      </a>
+    </section>
+
+    <section class="mb-12">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Best Sellers</h2>
+        <div class="flex items-center space-x-4">
+          <select class="border rounded-lg px-3 py-2 text-gray-700">
+            <option value="most-bought">Most Popular</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {topSellers.map(product => (
+          <ProductCard 
+            name={product.name}
+            price={product.price}
+            image={product.image}
+            id={product.id}
+            description={product.description}
+          />
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-white rounded-lg p-8 mb-12 shadow-sm">
+      <h2 class="text-2xl font-bold mb-4">Why Choose Our T-Shirts?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="text-3xl mb-2">🎨</div>
+          <h3 class="font-semibold mb-2">Unique AI Designs</h3>
+          <p class="text-gray-600">Every design is one-of-a-kind, created with cutting-edge AI technology</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">👕</div>
+          <h3 class="font-semibold mb-2">Premium Quality</h3>
+          <p class="text-gray-600">Made with high-quality cotton and polyester blends for comfort and durability</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">✨</div>
+          <h3 class="font-semibold mb-2">Perfect Fit</h3>
+          <p class="text-gray-600">Available in multiple sizes and styles for men and women</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
