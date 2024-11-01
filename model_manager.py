@@ -53,7 +53,12 @@ class ModelManager:
                 "*.txt",          # Text files
                 "*.yaml",         # YAML config files
                 "*.py",            # Python files
-                "config.json"      # Main config
+                "config.json",      # Main config
+                "pytorch_model.bin",  # Added pattern for text encoder
+                "model.safetensors",  # Added pattern for text encoder
+                "tf_model.h5",  # Added pattern for text encoder
+                "model.ckpt.index",  # Added pattern for text encoder
+                "flax_model.msgpack"  # Added pattern for text encoder
             ]
 
             snapshot_path = snapshot_download(
